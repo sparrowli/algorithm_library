@@ -8,6 +8,12 @@
 #include "gtest/gtest.h"
 
 namespace {
+std::string ProduceDebugText(size_t source_num, int sample_rate_hz) {
+  std::ostringstream ss;
+  ss << "Number of sources: " << source_num << " ";
+  ss << "Sample rate: " << sample_rate_hz;
+  return ss.str();
+}
 
 class OutputRateCalculatorSpec : public testing::Test {
  protected:
@@ -16,6 +22,7 @@ class OutputRateCalculatorSpec : public testing::Test {
 };
 
 TEST_F(OutputRateCalculatorSpec, empty) {
+  SCOPED_TRACE(ProduceDebugText(0u, 48000));
   EXPECT_EQ(0u, sample_rates_.size());
   EXPECT_EQ(48000, rate_calculator_.CalculateOutputRate(sample_rates_));
 }
