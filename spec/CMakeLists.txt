@@ -18,6 +18,12 @@ set (PROJECT_SOURCE_FILES
   ${PROJECT_SOURCE_DIR}/src/output_rate_calculator.cc
   ${PROJECT_SOURCE_DIR}/src/base_algorithm.cc
   ${PROJECT_SOURCE_DIR}/src/checks.cc
+  ${PROJECT_SOURCE_DIR}/src/int_stack.cc
+  ${PROJECT_SOURCE_DIR}/src/dfs.cc
+  ${PROJECT_SOURCE_DIR}/spec/dfs_spec.cc
+  ${PROJECT_SOURCE_DIR}/spec/linked_list_spec.cc
+  ${PROJECT_SOURCE_DIR}/spec/int_queue_spec.cc
+  ${PROJECT_SOURCE_DIR}/spec/int_stack_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/output_rate_calculator_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/base_algorithm_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/safe_compare_spec.cc

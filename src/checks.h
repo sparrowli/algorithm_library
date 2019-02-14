@@ -261,6 +261,7 @@ class FatalLogCall final {
   
 
 #define RTC_CHECK_GE(val1, val2) RTC_CHECK_OP(Ge, >=, val1, val2)
+#define RTC_CHECK_GT(val1, val2) RTC_CHECK_OP(Gt, >, val1, val2)
 
 }  // namespace rtc
 

@@ -16,7 +16,8 @@ set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/googletest)
 
 message(STATUS "PROJECT_SOURCE_DIR : [${PROJECT_SOURCE_DIR}]")
-set (PROJECT_SOURCE_FILES 
+set (PROJECT_SOURCE_FILES
+  ${PROJECT_SOURCE_DIR}/src/int_static.cc 
   ${PROJECT_SOURCE_DIR}/src/checks.cc
   ${PROJECT_SOURCE_DIR}/src/output_rate_calculator.cc
   ${PROJECT_SOURCE_DIR}/main.cc)
