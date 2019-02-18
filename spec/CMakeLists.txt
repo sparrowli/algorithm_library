@@ -18,6 +18,7 @@ set (PROJECT_SOURCE_FILES
   ${PROJECT_SOURCE_DIR}/src/output_rate_calculator.cc
   ${PROJECT_SOURCE_DIR}/src/base_algorithm.cc
   ${PROJECT_SOURCE_DIR}/src/lc_two_sum.cc
+  ${PROJECT_SOURCE_DIR}/src/lc_add_two_numbers.cc
   ${PROJECT_SOURCE_DIR}/src/checks.cc
   ${PROJECT_SOURCE_DIR}/src/int_stack.cc
   ${PROJECT_SOURCE_DIR}/src/dfs.cc
@@ -29,6 +30,7 @@ set (PROJECT_SOURCE_FILES
   ${PROJECT_SOURCE_DIR}/spec/base_algorithm_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/safe_compare_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/lc_two_sum_spec.cc
+  ${PROJECT_SOURCE_DIR}/spec/lc_add_two_numbers_spec.cc
   ${PROJECT_SOURCE_DIR}/spec/gmock_main.cc)
 
 include_directories (

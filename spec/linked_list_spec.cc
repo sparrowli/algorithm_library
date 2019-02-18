@@ -20,7 +20,7 @@ class LinkedListSpec : public testing::Test {
 TEST_F(LinkedListSpec, DefaultListNodeConstructor) {
   ListNode *one = new ListNode();
 
-  EXPECT_EQ(0, one->data);
+  EXPECT_EQ(-1, one->data);
   EXPECT_EQ(nullptr, one->next);
 }
 

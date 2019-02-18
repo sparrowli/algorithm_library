@@ -5,7 +5,8 @@ typedef struct ListNode {
   int data;
   ListNode *next;
 
-  ListNode() : data(0), next(nullptr) {}
+  ListNode() : data(-1), next(nullptr) {}
+  ListNode(int v) : data(v), next(nullptr) {}
 } ListNode;
 
 class LinkedList {
