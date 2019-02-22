@@ -1,7 +1,6 @@
 #include "src/lc_longest_substring_without_repeating_characters.h"
 
 #include "spec/lc_clock.h"
-
 #include "gtest/gtest.h"
 
 class LongestSubstringSpec : public QuickTest {
