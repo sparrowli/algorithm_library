@@ -2,6 +2,9 @@
 #define ALGORITHM_LIBRARY_SRC_BASE_ALGORITHM_H_
 
 #include <cstddef>
+#include <string>
+
+std::string TwoLargerNumsMultiply(std::string s1, std::string s2);
 
 int SumOfTwoNumber(int added, int augend);
 

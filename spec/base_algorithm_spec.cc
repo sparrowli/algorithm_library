@@ -6,6 +6,18 @@
 
 namespace {
 
+TEST(TwoLargerNumsMultiply, BothAreOneDigit) {
+  EXPECT_EQ("1", TwoLargerNumsMultiply("1", "1"));
+
+  EXPECT_EQ("0", TwoLargerNumsMultiply("1", "0"));
+
+  EXPECT_EQ("10", TwoLargerNumsMultiply("2", "5"));
+
+  EXPECT_EQ("213739916", TwoLargerNumsMultiply("4154", "51454"));
+
+  EXPECT_EQ("41549622603955309777243716069997997007620439937711509062916", TwoLargerNumsMultiply("654154154151454545415415454", "63516561563156316545145146514654"));
+}
+
 TEST(TwoNumbersAddedSpec, integrate) {
   EXPECT_EQ(2, SumOfTwoNumber(1, 1));
   /*
@@ -345,6 +357,8 @@ double align_filter_dB [26] [2] = {{0.,-500},
 
 TEST(P862DSPSpec, PowerOfTwo) {
   EXPECT_EQ(4, nextpow2(3));
+  EXPECT_EQ(5, nextpow2(5));
+  EXPECT_EQ(5, nextpow2(9));
   EXPECT_EQ(pow(2, 17), nextpow2(69776));
   EXPECT_TRUE(ispow2(nextpow2(3) + 4));
   EXPECT_TRUE(ispow2(nextpow2(69776)));

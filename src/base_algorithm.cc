@@ -2,8 +2,76 @@
 
 #include <math.h>
 #include <limits.h>
+#include <vector>
 
 #include "src/checks.h"
+
+std::string TwoLargerNumsMultiply(std::string s1, std::string s2) {
+  size_t len1 = s1.length();
+  size_t len2 = s2.length();
+
+  if (len1 == 0 || len2 == 0) {
+    return "0";
+  }
+
+  size_t carry = 0;
+
+  std::vector<int> result(len1 + len2, 0);
+
+  int digit_1 = 0;
+  int digit_2 = 0;
+
+  int index_1 = 0;
+  int index_2 = 0;
+
+  int pos_1 = 0;
+  int pos_2 = 0;
+
+  int sum = 0;
+
+  for (index_1 = len1 - 1; index_1 >= 0; --index_1) {
+
+    digit_1 = s1[index_1] - '0';
+
+    carry = 0;
+    pos_2 = 0;
+
+    for (index_2 = len2 -1; index_2 >= 0; --index_2) {
+
+      digit_2 = s2[index_2] - '0';
+
+      sum = digit_1 * digit_2 + result[pos_1 + pos_2] + carry;
+
+      result[pos_1 + pos_2] = sum % 10;
+
+      carry = sum / 10;
+
+      ++pos_2;
+    }
+
+    if (carry) {
+      result[pos_1 + pos_2] += carry;
+    }
+    ++pos_1;
+  }
+
+
+
+  int leading_zero = result.size() - 1;
+  while (leading_zero >= 0 && result[leading_zero] == 0) {
+    leading_zero--;
+  }
+
+  if (leading_zero == -1) {
+    return "0";
+  }
+
+  std::string s = "";
+  while (leading_zero >= 0) {
+    s += std::to_string(result[leading_zero--]);
+  }
+  return s;
+}
 
 int SumOfTwoNumber(int added, int augend) {
   return added + augend;
