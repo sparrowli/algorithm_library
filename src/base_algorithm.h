@@ -6,6 +6,10 @@
 
 std::string TwoLargerNumsMultiply(std::string s1, std::string s2);
 
+std::vector<std::string> GenerateParentheses(int n);
+
+std::vector<std::string> GenerateParenthesesByHand(int n);
+
 int SumOfTwoNumber(int added, int augend);
 
 int MaximumOfThreeNumber(int a, int b, int c);

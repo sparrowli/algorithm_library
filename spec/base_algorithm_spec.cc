@@ -18,6 +18,39 @@ TEST(TwoLargerNumsMultiply, BothAreOneDigit) {
   EXPECT_EQ("41549622603955309777243716069997997007620439937711509062916", TwoLargerNumsMultiply("654154154151454545415415454", "63516561563156316545145146514654"));
 }
 
+TEST(GenerateParenthesesSpec, CheckValidationAndNIsOne) {
+  std::vector<std::string> actual_res;
+  actual_res = GenerateParenthesesByHand(0);
+  EXPECT_EQ(1, actual_res.size());
+  EXPECT_EQ("", actual_res[0]);
+
+  actual_res = GenerateParenthesesByHand(1);
+  EXPECT_EQ(1, actual_res.size());
+  EXPECT_EQ("()1", actual_res[0]);
+
+  actual_res = GenerateParenthesesByHand(2);
+  EXPECT_EQ(2, actual_res.size());
+  EXPECT_EQ("()()", actual_res[0]);
+  EXPECT_EQ("(())", actual_res[1]);
+}
+
+
+TEST(GenerateParenthesesSpec, CheckValidationAndNIsOne) {
+  std::vector<std::string> actual_res;
+  actual_res = GenerateParentheses(0);
+  EXPECT_EQ(1, actual_res.size());
+  EXPECT_EQ("", actual_res[0]);
+
+  actual_res = GenerateParentheses(1);
+  EXPECT_EQ(1, actual_res.size());
+  EXPECT_EQ("()1", actual_res[0]);
+
+  actual_res = GenerateParentheses(2);
+  EXPECT_EQ(2, actual_res.size());
+  EXPECT_EQ("()()", actual_res[0]);
+  EXPECT_EQ("(())", actual_res[1]);
+}
+
 TEST(TwoNumbersAddedSpec, integrate) {
   EXPECT_EQ(2, SumOfTwoNumber(1, 1));
   /*

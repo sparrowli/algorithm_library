@@ -6,6 +6,71 @@
 
 #include "src/checks.h"
 
+int gen(size_t open_left, size_t close_left,  )
+
+std::vector<std::string> GenerateParenthesesByHand(int n) {
+  using namespace std;
+  vector<string> res;
+  string s = "";
+
+  
+  if (n < 1) {
+    res.push_back(s);
+    return res;
+  }
+
+  if (n == 1) {
+    s += "(";  // assemble open bracket
+    s += ")";  // set closed bracket
+
+    res.push_back(s);
+    return res;
+  }
+
+  if (n == 2) {
+    s += "(";
+
+  }
+
+  std::string one = "";
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+
+    }
+  }
+
+  res.push_back(")(");
+}
+
+std::vector<std::string> GenerateParentheses(int n) {
+
+  using namespace std;
+
+  vector<string> res;
+  vector<pair<int, string>> sta;
+  size_t len = 2*n;
+        
+  // 剩余多少个(
+  sta.push_back(make_pair(0, ""));
+
+  while(!sta.empty()) {
+    pair<int, string> elem = sta.back();
+      sta.pop_back();
+      if (elem.first == n) {
+        res.push_back(elem.second + string(len - elem.second.size(), ')'));
+      } else {
+        if (elem.first*2 == elem.second.size()) {
+          sta.push_back(make_pair(elem.first+1, elem.second + '('));
+        } else {
+          sta.push_back(make_pair(elem.first+1, elem.second + '('));
+          sta.push_back(make_pair(elem.first, elem.second+')'));
+        }
+      }
+    }
+
+  return res;
+}
+
 std::string TwoLargerNumsMultiply(std::string s1, std::string s2) {
   size_t len1 = s1.length();
   size_t len2 = s2.length();
